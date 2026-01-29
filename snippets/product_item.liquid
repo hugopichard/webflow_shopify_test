@@ -3,7 +3,6 @@
                       <div class="product-item_image-link">
                         <a li-object:href="product.url" href="{{ product.url }}" class="product-item_image-wrapper w-inline-block"><img li-object:alt="product.featured_image.alt" loading="lazy" li-object:src="product.featured_image | image_url: width: 450" src="{{ product.featured_image | image_url: width: 450 }}" alt="{{ product.featured_image.alt }}" class="product-item_image"></a>
                       </div>
-                      <div class="spacer-xxsmall"></div>
                       <a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link w-inline-block">
                         <div class="product-item_left">
                           <div li-object="product.title" class="heading-style-h3">{{ product.title }}</div>
@@ -17,5 +16,4 @@
                           <div li-object="product.price | money" class="text-size-regular">{{ product.price | money }}</div>
                         </div>
                       </a>
-                      <div class="spacer-small"></div>
                     </div>

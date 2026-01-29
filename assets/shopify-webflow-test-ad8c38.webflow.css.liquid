@@ -19,18 +19,18 @@
   --base-color-neutral--neutral-lighter: #ccc;
   --base-color-neutral--neutral-darkest: #111;
   --base-color-neutral--neutral-lightest: #eee;
+  --border-radius--medium: .5rem;
+  --background-color--background-secondary: var(--base-color-brand--beige-mid);
   --accessible-components-dark-grey\<deleted\|variable-c4d8099c\>: #9b9b9b;
   --text-color--text-error: var(--base-color-system--error-red-dark);
   --base-color-system--success-green-dark: #17660f;
   --base-color-neutral--neutral-darker: #222;
   --base-color-system--error-red: #f8e4e4;
   --base-color-system--error-red-dark: #9b1313;
-  --border-radius--medium: .5rem;
   --background-color--background-error: var(--base-color-system--error-red);
   --background-color--background-warning: var(--base-color-system--warning-yellow);
   --text-color--text-warning: var(--base-color-system--warning-yellow-dark);
   --background-color--background-primary: var(--base-color-brand--beige-light);
-  --background-color--background-secondary: var(--base-color-brand--beige-mid);
   --background-color--background-alternate: var(--base-color-neutral--white);
   --background-color--background-success: var(--base-color-system--success-green);
   --text-color--text-success: var(--base-color-system--success-green-dark);
@@ -410,7 +410,7 @@ figcaption {
 .heading-style-h3 {
   text-transform: uppercase;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -1543,6 +1543,8 @@ figcaption {
 }
 
 .product-item_component {
+  border-radius: var(--border-radius--medium);
+  background-color: var(--background-color--background-secondary);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -1560,19 +1562,19 @@ figcaption {
 }
 
 .product-item_image-wrapper {
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
+  display: flex;
   position: relative;
   overflow: hidden;
 }
 
 .product-item_image {
-  background-color: var(--base-color-neutral--neutral-lightest);
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0%;
+  object-fit: contain;
+  width: 75%;
+  height: 75%;
 }
 
 .product-item_text-link {
@@ -2544,17 +2546,16 @@ figcaption {
 }
 
 .filter_layout {
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
+  flex-flow: column;
   grid-template-rows: auto;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content;
   grid-auto-columns: 1fr;
-  align-items: start;
-  display: grid;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: block;
 }
 
 .filter_filters-wrapper {
-  max-width: 19rem;
   position: sticky;
   top: 10vh;
 }
