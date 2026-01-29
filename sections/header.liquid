@@ -1,11 +1,15 @@
-<div data-animation="default" class="nav_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="9132635a-7891-b0d1-9b20-ecb0d5a86df9" role="banner" data-duration="400" x-data="">
+<div data-animation="default" class="nav_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="all" data-w-id="9132635a-7891-b0d1-9b20-ecb0d5a86df9" role="banner" data-duration="400" x-data="">
           <div class="nav_container">
-            <a href="{{ routes.root_url }}" li-object:href="routes.root_url" class="nav_logo-link w-nav-brand">{% if section.settings.image_logo %}
-{{ section.settings.image_logo | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'nav_logo' }}
-{% else %}
-<img src="{{ 'liquify-logo.svg' | asset_url }}" loading="lazy" alt="" class="nav_logo">
-{% endif %}</a>
-            <nav role="navigation" id="w-node-_9132635a-7891-b0d1-9b20-ecb0d5a86dfd-d5a86df8" class="nav_menu is-page-height-tablet w-nav-menu">
+            <div class="nav_menu-button w-nav-button">
+              <div class="menu-icon">
+                <div class="menu-icon_line-top"></div>
+                <div class="menu-icon_line-middle">
+                  <div class="menu-icon_line-middle-inner"></div>
+                </div>
+                <div class="menu-icon_line-bottom"></div>
+              </div>
+            </div>
+            <nav role="navigation" id="w-node-_9132635a-7891-b0d1-9b20-ecb0d5a86dfd-d5a86df8" class="nav_menu w-nav-menu">
               {% for link in linklists[section.settings.menu].links %}    <div data-hover="true" data-delay="200" li-for="link in linklists[section.settings.menu].links" class="nav_menu-dropdown w-dropdown">
                                     
                 
@@ -740,15 +744,6 @@
                 </div>
               </div>
             </div>
-            <div class="nav_menu-button w-nav-button">
-              <div class="menu-icon">
-                <div class="menu-icon_line-top"></div>
-                <div class="menu-icon_line-middle">
-                  <div class="menu-icon_line-middle-inner"></div>
-                </div>
-                <div class="menu-icon_line-bottom"></div>
-              </div>
-            </div>
           </div>
         </div> {% schema %} {
     "tag": "div",
@@ -774,11 +769,6 @@
         }
     ],
     "settings": [
-        {
-            "id": "image_logo",
-            "type": "image_picker",
-            "label": "Logo"
-        },
         {
             "id": "text_search",
             "type": "text",
