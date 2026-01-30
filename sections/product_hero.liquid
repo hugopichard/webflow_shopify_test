@@ -1,0 +1,56 @@
+  <div class="padding-global padding-section-small">
+    <div class="container-large">
+      <div class="product-header_component">
+        <script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div class="product-header_layout" li-element="product-variant-container" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">
+          <div class="swiper-container is-product-gallery">
+            <div class="swiper is-product-gallery">
+              <div class="swiper-wrapper is-product-gallery" id="my-gallery" li-for:inside="media in product.media">
+        {% for media in product.media %}                            
+                
+                            {% if media.media_type == 'image' %}    <div class="swiper-slide is-product-gallery" li-if="media.media_type == 'image'">
+    
+                  <div class="product-header_gallery-lightbox">
+                    <img class="product-header_gallery-image" alt="{{ media.alt }}" src="{{ media | image_url: width: 1000 }}" loading="lazy" li-object:src="media | image_url: width: 1000" li-object:alt="media.alt" data-dyn-bind="[object Object]">
+                  </div>
+                    </div>
+{% endif %}
+                            
+                
+                            {% if media.media_type == 'video' %}    <div class="swiper-slide is-product-gallery" li-if="media.media_type == 'video'">
+    
+                  <div class="product-header_gallery-lightbox">
+                    <div class="product-header_gallery-image" li-object="media | video_tag: controls: true">{{ media | video_tag: controls: true }}</div>
+                  </div>
+                    </div>
+{% endif %}
+                            
+              
+                    {% endfor %}    </div>
+            </div>
+            <div class="spacer-xxhuge">
+            </div>
+            <div class="product-header_info-left">
+              <div class="saveurs">
+                {% if product.metafields.shopify.flavor.value %}    <div li-if="product.metafields.shopify.flavor.value">
+    
+                  {% for f in product.metafields.shopify.flavor.value %}    <div li-for="f in product.metafields.shopify.flavor.value">
+                                    
+                    
+                            <h2 class="heading-style-h3 text-align-center" li-object="f.label">{{ f.label }}</h2>
+                            
+                  
+                        </div>
+{% endfor %}
+                    </div>
+{% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="product-header_product-details" li-content-for-theme-blocks="right">
+{% content_for 'blocks' %}
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
