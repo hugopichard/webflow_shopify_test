@@ -1,10 +1,12 @@
 <div li-block="saveurs" {{ block.shopify_attributes }}>
                     
-                    
-                    {% if product.metafields.shopify.flavor.value %}    <div li-if="product.metafields.shopify.flavor.value">
-    
-                      <h2 li-object="f.label" li-for="f in product.metafields.shopify.flavor.value" class="heading-style-h3">{{ f.label }}</h2>
-                        </div>
+                    {% if product.metafields.shopify.flavor.value %}
+  <div class="saveurs-items">
+    <span
+      class="saveur"
+      li-for="f in product.metafields.shopify.flavor.value"
+      li-object="f"></span>
+  </div>
 {% endif %}
                     
                   
