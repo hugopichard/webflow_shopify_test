@@ -1,0 +1,29 @@
+<div li-block="header-block" role="listitem" class="more_item w-dyn-item" {{ block.shopify_attributes }}>
+                    
+                      
+                    <a href="{{ block.settings.url_link }}" class="more_image-link w-inline-block"> <h3 class="heading-style-h4 text-color-white">{{ block.settings.text_heading }}</h3> </a>
+                    
+                    
+                </div> {% schema %} {
+    "name": "header-block",
+    "settings": [
+        {
+            "id": "url_link",
+            "type": "url",
+            "label": "Link"
+        },
+        {
+            "id": "text_heading",
+            "type": "text",
+            "label": "Heading",
+            "default": "Bestselling"
+        }
+    ],
+    "presets": [
+        {
+            "name": "header-block",
+            "blocks": []
+        }
+    ],
+    "tag": null
+} {% endschema %}
