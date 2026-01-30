@@ -8,6 +8,9 @@
                         
                             <h2 li-object="f.label" class="heading-style-h3">{{ f.label }}</h2>
                             
+                        
+                            <div class="w-embed">{% unless forloop.last %}, {% endunless %}</div>
+                            
                       
                         </div>
 {% endfor %}
