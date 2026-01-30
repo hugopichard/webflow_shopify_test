@@ -19,14 +19,43 @@
 {{ section.settings.text_paragraphe }}
 </p>
           </div>
-          <div class="more_list-wrapper w-dyn-list">
-            <div li-content-for-theme-blocks="" role="list" class="more_liste w-dyn-items">
+          {% for block in section.blocks %}
+    {% if block.type == "header-block" %}
+                    <div li-block="header-block" class="hero-bottom_wrapper">
+                                    
+            
+                                    <div class="hero-bottom_container">
+              <div class="hero-bottom_title-wrapper">
+                <h2 class="text-color-white text-align-center heading-style-h3">
+{{ block.settings.text_text }}
+</h2>{% if block.settings.image_icon %}
+{{ block.settings.image_icon | image_url: width: 1000 | image_tag: loading: 'lazy' }}
+{% else %}
+<img src="{{ 'SVG_margin.png' | asset_url }}" loading="lazy" alt="">
+{% endif %}
+              </div>
+              <div class="hero-bottom_cards-wrapper">
+                <div class="more_list-wrapper w-dyn-list">
+                  <div li-content-for-theme-blocks="" role="list" class="more_liste w-dyn-items">
 {% content_for 'blocks' %}
 </div>
-            <div class="hide w-dyn-empty">
-              <div>No items found.</div>
+                  <div class="hide w-dyn-empty">
+                    <div>No items found.</div>
+                  </div>
+                </div>
+                <div class="hero-bottom_cards-main-title text-color-white">
+                  <p class="heading-style-h3 container-large text-align-center">
+{{ block.settings.text_text }}
+</p>
+                </div>
+              </div>
             </div>
-          </div>
+                                    
+          
+                            </div>
+            {% endif %}
+{% endfor %}
+          <div class="spacer-large"></div>
         </div> {% schema %} {
     "tag": "header",
     "name": "Image with Text",
@@ -75,7 +104,12 @@
             "category": "Content",
             "blocks": [
                 {
-                    "type": "block"
+                    "type": "header-block",
+                    "blocks": [
+                        {
+                            "type": "block"
+                        }
+                    ]
                 }
             ]
         }
