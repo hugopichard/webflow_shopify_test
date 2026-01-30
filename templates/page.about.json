@@ -1,12 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "contact": {
-            "type": "contact"
-        }
+  "sections": {
+    "contact": {
+      "type": "contact",
+      "settings": {
+        "text_heading": "Contact us",
+        "text_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "text_first_name": "First Name",
+        "text_last_name": "Last Name",
+        "text_email": "Email",
+        "text_message": "Message",
+        "richtext_i_accept_the_terms": "<p>I accept the Terms</p>"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "contact"
-    ]
+    "about_fullimg_76CjG8": {
+      "type": "about_fullimg",
+      "name": "about fullimg",
+      "settings": {
+        "text_heading": "So whichever way you make your coffee; a top-of the line coffee machine, a camping thermos, a pour over set, a machine you found on the roadside - an escape is possible. Just grab a bag, and jump right in.",
+        "text_left_text": "Escape<br>is alwas possible",
+        "text_right_text": "just grab a bag<br>and Jump right in",
+        "text_subheading": "48.8532° N — 66.0385° W<br>"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "contact",
+    "about_fullimg_76CjG8"
+  ]
 }
