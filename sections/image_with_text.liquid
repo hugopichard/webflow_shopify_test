@@ -19,17 +19,13 @@
 {{ section.settings.text_paragraphe }}
 </p>
           </div>
-          {% for block in section.blocks %}
-    {% if block.type == "header-block" %}
-                    <div li-block="header-block" class="hero-bottom_wrapper">
-                                    
-            
-                                    <div class="hero-bottom_container">
+          <div class="hero-bottom_wrapper">
+            <div class="hero-bottom_container">
               <div class="hero-bottom_title-wrapper">
                 <h2 class="text-color-white text-align-center heading-style-h3">
-{{ block.settings.text_text }}
-</h2>{% if block.settings.image_icon %}
-{{ block.settings.image_icon | image_url: width: 1000 | image_tag: loading: 'lazy' }}
+{{ section.settings.text_text }}
+</h2>{% if section.settings.image_icon %}
+{{ section.settings.image_icon | image_url: width: 1000 | image_tag: loading: 'lazy' }}
 {% else %}
 <img src="{{ 'SVG_margin.png' | asset_url }}" loading="lazy" alt="">
 {% endif %}
@@ -45,16 +41,12 @@
                 </div>
                 <div class="hero-bottom_cards-main-title text-color-white">
                   <p class="heading-style-h3 container-large text-align-center">
-{{ block.settings.text_text }}
+{{ section.settings.text_text }}
 </p>
                 </div>
               </div>
             </div>
-                                    
-          
-                            </div>
-            {% endif %}
-{% endfor %}
+          </div>
           <div class="spacer-large"></div>
         </div> {% schema %} {
     "tag": "header",
@@ -96,6 +88,17 @@
             "type": "text",
             "label": "Paragraphe",
             "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
+        },
+        {
+            "id": "text_text",
+            "type": "text",
+            "label": "Text",
+            "default": "A <br\/>montreal specialty coffee company"
+        },
+        {
+            "id": "image_icon",
+            "type": "image_picker",
+            "label": "Icon"
         }
     ],
     "presets": [
@@ -104,12 +107,7 @@
             "category": "Content",
             "blocks": [
                 {
-                    "type": "header-block",
-                    "blocks": [
-                        {
-                            "type": "block"
-                        }
-                    ]
+                    "type": "block"
                 }
             ]
         }
