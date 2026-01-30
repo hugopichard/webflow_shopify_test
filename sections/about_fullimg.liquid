@@ -1,0 +1,54 @@
+<div class="about-fulllimg_global-container padding-global">
+          <div class="about-fullimg_bg-img-wrapper">{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'about-fullimg_bg-img' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="about-fullimg_bg-img">
+{% endif %}</div>
+          <div class="about-fullimg_heading-wrapper">
+            <p class="heading-style-h4 text-color-white">So whichever way you make your coffee; a top-of the line coffee machine, a camping thermos, a pour over set, a machine you found on the roadside - an escape is possible. Just grab a bag, and jump right in.</p>
+          </div>
+          <div class="max-width-full padding-large">
+            <div class="about-fullimg_content-wrapper">
+              <p class="heading-style-h4 text-color-white">
+{{ section.settings.text_text }}
+</p>
+              <div class="about-fullimg_main-img-container">{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'about-fullimg_main-img' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="about-fullimg_main-img">
+{% endif %}</div>
+              <p class="text-align-right heading-style-h4 text-color-white">
+{{ section.settings.text_text }}
+</p>
+            </div>
+          </div>
+          <div class="about-fullimg_subheading-wrapper">
+            <p class="heading-style-h4 text-color-white">
+{{ section.settings.text_text }}
+</p>
+          </div>
+        </div> {% schema %} {
+    "tag": "div",
+    "name": "about fullimg",
+    "class": "section_about-fullimg",
+    "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text_text",
+            "type": "text",
+            "label": "Text",
+            "default": "Escape<br\/>is alwas possible"
+        }
+    ],
+    "presets": [
+        {
+            "name": "about fullimg",
+            "category": "custom",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
