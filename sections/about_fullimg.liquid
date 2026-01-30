@@ -2,7 +2,7 @@
           <div class="about-fullimg_bg-img-wrapper">{% if section.settings.image_bg_image %}
 {{ section.settings.image_bg_image | image_url: width: 1000 | image_tag: class: 'about-fullimg_bg-img', sizes: '(max-width: 1781px) 100vw, 1781px', loading: 'lazy' }}
 {% else %}
-<img class="about-fullimg_bg-img" src="{{ 'about-5.jpg' | asset_url }}" alt="" sizes="(max-width: 1781px) 100vw, 1781px" loading="lazy" srcset="{{ 'about-5.jpg' | asset_url }} 500w, {{ 'about-5.jpg' | asset_url }} 800w, {{ 'about-5.jpg' | asset_url }} 1080w, {{ 'about-5.jpg' | asset_url }} 1781w">
+<img class="about-fullimg_bg-img" src="{{ 'about-5.jpg' | asset_url }}" alt="" sizes="(max-width: 1781px) 100vw, 1781px" loading="lazy" srcset="{{ 'about-5-p-500.jpg' | asset_url }} 500w, {{ 'about-5-p-800.jpg' | asset_url }} 800w, {{ 'about-5-p-1080.jpg' | asset_url }} 1080w, {{ 'about-5.jpg' | asset_url }} 1781w">
 {% endif %}</div>
           <div class="about-fullimg_heading-wrapper">
             <p class="heading-style-h4 text-color-white">
@@ -18,7 +18,7 @@
                 <div class="about-fullimg_main-img-parallax">{% if section.settings.image_main_image %}
 {{ section.settings.image_main_image | image_url: width: 1000 | image_tag: class: 'about-fullimg_main-img', sizes: '(max-width: 1000px) 100vw, 1000px', loading: 'lazy' }}
 {% else %}
-<img class="about-fullimg_main-img" src="{{ 'DSF1881.jpg' | asset_url }}" alt="" sizes="(max-width: 1000px) 100vw, 1000px" loading="lazy" srcset="{{ 'DSF1881.jpg' | asset_url }} 500w, {{ 'DSF1881.jpg' | asset_url }} 800w, {{ 'DSF1881.jpg' | asset_url }} 1000w">
+<img class="about-fullimg_main-img" src="{{ 'DSF1881.jpg' | asset_url }}" alt="" sizes="(max-width: 1000px) 100vw, 1000px" loading="lazy" srcset="{{ 'DSF1881-p-500.jpg' | asset_url }} 500w, {{ 'DSF1881-p-800.jpg' | asset_url }} 800w, {{ 'DSF1881.jpg' | asset_url }} 1000w">
 {% endif %}</div>
               </div>
               <p class="text-align-right heading-style-h4 text-color-white">
