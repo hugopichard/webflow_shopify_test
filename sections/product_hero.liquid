@@ -27,9 +27,30 @@
                     {% endfor %}    </div>
                   </div>
                   <div class="spacer-xxhuge"></div>
-                  <div li-content-for-theme-blocks="left" class="product-header_info-left">
-{% content_for 'blocks' %}
-</div>
+                  <div class="product-header_info-left">
+                    {% for block in section.blocks %}
+    {% if block.type == "saveurs" %}
+                    <div li-block="saveurs" class="saveurs">
+                                    
+                      
+                                    {% if product.metafields.shopify.flavor.value %}    <div li-if="product.metafields.shopify.flavor.value">
+    
+                        {% for f in product.metafields.shopify.flavor.value %}    <div li-for="f in product.metafields.shopify.flavor.value">
+                                    
+                          
+                            <h2 li-object="f.label" class="heading-style-h3 text-align-center">{{ f.label }}</h2>
+                            
+                        
+                        </div>
+{% endfor %}
+                          </div>
+{% endif %}
+                                    
+                    
+                            </div>
+            {% endif %}
+{% endfor %}
+                  </div>
                 </div>
                 <div li-content-for-theme-blocks="right" id="w-node-_4b0e9b61-6f53-1185-9fdd-143753136879-5313685d" class="product-header_product-details">
 {% content_for 'blocks' %}
@@ -76,7 +97,25 @@ document.addEventListener("DOMContentLoaded", () => {
     "class": "section_product-header",
     "blocks": [
         {
-            "type": "saveurs"
+            "type": "product-name"
+        },
+        {
+            "type": "product-price"
+        },
+        {
+            "type": "description"
+        },
+        {
+            "type": "vendor"
+        },
+        {
+            "type": "tags"
+        },
+        {
+            "type": "add-to-cart"
+        },
+        {
+            "type": "availability"
         },
         {
             "type": "@app"
