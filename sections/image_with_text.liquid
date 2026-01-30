@@ -16,13 +16,29 @@
               </div>
             </div>
             <p class="text-color-white">
-{{ section.settings.text_paragraph }}
+{{ section.settings.text_paragraphe }}
 </p>
+          </div>
+          <div class="more_list-wrapper w-dyn-list">
+            <div li-content-for-theme-blocks="" role="list" class="more_liste w-dyn-items">
+{% content_for 'blocks' %}
+</div>
+            <div class="hide w-dyn-empty">
+              <div>No items found.</div>
+            </div>
           </div>
         </div> {% schema %} {
     "tag": "header",
     "name": "Image with Text",
     "class": "section_header-home",
+    "blocks": [
+        {
+            "type": "block"
+        },
+        {
+            "type": "@app"
+        }
+    ],
     "settings": [
         {
             "id": "image_image",
@@ -47,9 +63,9 @@
             "default": "Shop Now"
         },
         {
-            "id": "text_paragraph",
+            "id": "text_paragraphe",
             "type": "text",
-            "label": "Paragraph",
+            "label": "Paragraphe",
             "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
         }
     ],
@@ -57,7 +73,11 @@
         {
             "name": "Image with Text",
             "category": "Content",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "block"
+                }
+            ]
         }
     ]
 } {% endschema %}
