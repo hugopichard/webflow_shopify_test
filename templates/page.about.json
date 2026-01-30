@@ -9,18 +9,6 @@
  */
 {
   "sections": {
-    "contact": {
-      "type": "contact",
-      "settings": {
-        "text_heading": "Contact us",
-        "text_paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "text_first_name": "First Name",
-        "text_last_name": "Last Name",
-        "text_email": "Email",
-        "text_message": "Message",
-        "richtext_i_accept_the_terms": "<p>I accept the Terms</p>"
-      }
-    },
     "about_fullimg_76CjG8": {
       "type": "about_fullimg",
       "name": "about fullimg",
@@ -35,7 +23,6 @@
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "contact",
     "about_fullimg_76CjG8"
   ]
 }
