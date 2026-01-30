@@ -4141,11 +4141,19 @@ figcaption {
 .about-fullimg_main-img-container {
   aspect-ratio: 2 / 3;
   width: 40%;
+  overflow: hidden;
 }
 
 .about-fullimg_heading-wrapper, .about-fullimg_subheading-wrapper {
   z-index: 1;
   position: relative;
+}
+
+.about-fullimg_main-img-parallax {
+  aspect-ratio: 2 / 3;
+  width: 120%;
+  margin-top: -10%;
+  margin-left: -10%;
 }
 
 @media screen and (max-width: 991px) {
