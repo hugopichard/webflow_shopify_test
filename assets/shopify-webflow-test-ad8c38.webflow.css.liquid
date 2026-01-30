@@ -183,9 +183,6 @@ h6 {
 }
 
 p {
-  width: 50%;
-  margin-bottom: 0;
-  padding-right: 10rem;
   font-family: Inter, sans-serif;
   font-weight: 300;
 }
@@ -452,6 +449,7 @@ figcaption {
 }
 
 .padding-global {
+  margin-right: 70px;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -510,6 +508,7 @@ figcaption {
 
 .text-align-right {
   text-align: right;
+  padding-right: 0;
 }
 
 .text-weight-bold {
@@ -4096,6 +4095,59 @@ figcaption {
   display: flex;
 }
 
+.section_about-fullimg {
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-fullimg_bg-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0%;
+}
+
+.about-fullimg_bg-img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-fullimg_content-wrapper {
+  z-index: 9999;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  text-transform: uppercase;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.about-fulllimg_global-container {
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 65svh;
+  display: flex;
+  position: relative;
+}
+
+.about-fullimg_main-img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-fullimg_main-img-container {
+  aspect-ratio: 2 / 3;
+  width: 40%;
+}
+
+.about-fullimg_heading-wrapper, .about-fullimg_subheading-wrapper {
+  z-index: 1;
+  position: relative;
+}
+
 @media screen and (max-width: 991px) {
   .padding-medium {
     padding: 1.5rem;
@@ -5900,7 +5952,7 @@ figcaption {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-b90266f4-7b7e-d3a3-be54-12662ea896eb-932dc593, #w-node-_6ca8e057-6645-9d42-e1be-60491d7bcc0d-1d7bcbea {
+#w-node-b90266f4-7b7e-d3a3-be54-12662ea896eb-932dc593 {
   justify-self: start;
 }
 
