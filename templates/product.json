@@ -18,13 +18,18 @@
     "product_hero_4CcFkb": {
       "type": "product_hero",
       "blocks": {
-        "vendor_8Q8Apd": {
-          "type": "vendor",
+        "product_name_6a6xiU": {
+          "type": "product-name",
           "settings": {},
           "blocks": {}
         },
-        "product_name_6a6xiU": {
-          "type": "product-name",
+        "description_wMQTbM": {
+          "type": "description",
+          "settings": {},
+          "blocks": {}
+        },
+        "vendor_8Q8Apd": {
+          "type": "vendor",
           "settings": {},
           "blocks": {}
         },
@@ -33,37 +38,24 @@
           "settings": {},
           "blocks": {}
         },
-        "availability_DArHRF": {
-          "type": "availability",
-          "settings": {},
-          "blocks": {}
-        },
         "add_to_cart_7nVrVg": {
           "type": "add-to-cart",
           "settings": {},
           "blocks": {}
         },
-        "saveurs_C4neVh": {
-          "type": "saveurs",
+        "availability_DArHRF": {
+          "type": "availability",
           "settings": {},
-          "blocks": {}
-        },
-        "description_wMQTbM": {
-          "type": "description",
-          "settings": {
-            "text_heading": "Description"
-          },
           "blocks": {}
         }
       },
       "block_order": [
-        "vendor_8Q8Apd",
         "product_name_6a6xiU",
+        "description_wMQTbM",
+        "vendor_8Q8Apd",
         "product_price_pifnNw",
-        "availability_DArHRF",
         "add_to_cart_7nVrVg",
-        "saveurs_C4neVh",
-        "description_wMQTbM"
+        "availability_DArHRF"
       ],
       "name": "Product Hero",
       "settings": {}
