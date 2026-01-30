@@ -1,23 +1,20 @@
-<div li-block="saveurs" {{ block.shopify_attributes }}>
+<div li-block="saveurs" class="saveurs" {{ block.shopify_attributes }}>
                     
-                    
+                      
                     {% if product.metafields.shopify.flavor.value %}    <div li-if="product.metafields.shopify.flavor.value">
     
-                      {% for f in product.metafields.shopify.flavor.value %}    <div li-for="f in product.metafields.shopify.flavor.value">
+                        {% for f in product.metafields.shopify.flavor.value %}    <div li-for="f in product.metafields.shopify.flavor.value">
                                     
-                        
-                            <h2 li-object="f.label" class="heading-style-h3">{{ f.label }}</h2>
+                          
+                            <h2 li-object="f.label" class="heading-style-h3 text-align-center">{{ f.label }}</h2>
                             
                         
-                            <div class="w-embed">{% unless forloop.last %}, {% endunless %}</div>
-                            
-                      
                         </div>
 {% endfor %}
-                        </div>
+                          </div>
 {% endif %}
                     
-                  
+                    
                 </div> {% schema %} {
     "name": "saveurs",
     "settings": [],
