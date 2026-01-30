@@ -1,50 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "product_hero": {
-            "type": "product_hero",
-            "blocks": {
-                "vendor": {
-                    "type": "vendor",
-                    "name": "Vendor"
-                },
-                "product-name": {
-                    "type": "product-name",
-                    "name": "Product Name"
-                },
-                "product-price": {
-                    "type": "product-price",
-                    "name": "Product Price"
-                },
-                "availability": {
-                    "type": "availability",
-                    "name": "Availability"
-                },
-                "add-to-cart": {
-                    "type": "add-to-cart",
-                    "name": "Add to Cart"
-                },
-                "description": {
-                    "type": "description",
-                    "name": "Description"
-                }
-            },
-            "block_order": [
-                "vendor",
-                "product-name",
-                "product-price",
-                "availability",
-                "add-to-cart",
-                "description"
-            ]
-        },
-        "recommended_products": {
-            "type": "recommended_products"
-        }
+  "sections": {
+    "recommended_products": {
+      "type": "recommended_products",
+      "settings": {
+        "text_heading": "Recommended"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "product_hero",
-        "recommended_products"
-    ]
+    "product_hero_4CcFkb": {
+      "type": "product_hero",
+      "blocks": {
+        "vendor_8Q8Apd": {
+          "type": "vendor",
+          "settings": {},
+          "blocks": {}
+        },
+        "product_name_6a6xiU": {
+          "type": "product-name",
+          "settings": {},
+          "blocks": {}
+        },
+        "product_price_pifnNw": {
+          "type": "product-price",
+          "settings": {},
+          "blocks": {}
+        },
+        "availability_DArHRF": {
+          "type": "availability",
+          "settings": {},
+          "blocks": {}
+        },
+        "add_to_cart_7nVrVg": {
+          "type": "add-to-cart",
+          "settings": {},
+          "blocks": {}
+        },
+        "saveurs_C4neVh": {
+          "type": "saveurs",
+          "settings": {},
+          "blocks": {}
+        },
+        "description_wMQTbM": {
+          "type": "description",
+          "settings": {
+            "text_heading": "Description"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "vendor_8Q8Apd",
+        "product_name_6a6xiU",
+        "product_price_pifnNw",
+        "availability_DArHRF",
+        "add_to_cart_7nVrVg",
+        "saveurs_C4neVh",
+        "description_wMQTbM"
+      ],
+      "name": "Product Hero",
+      "settings": {}
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "recommended_products",
+    "product_hero_4CcFkb"
+  ]
 }
