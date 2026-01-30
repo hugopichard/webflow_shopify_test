@@ -9,20 +9,20 @@
  */
 {
   "sections": {
-    "about_fullimg_76CjG8": {
+    "about_fullimg_pVNmrq": {
       "type": "about_fullimg",
       "name": "about fullimg",
       "settings": {
         "text_heading": "So whichever way you make your coffee; a top-of the line coffee machine, a camping thermos, a pour over set, a machine you found on the roadside - an escape is possible. Just grab a bag, and jump right in.",
-        "text_left_text": "Escape<br>is alwas possible",
-        "text_right_text": "just grab a bag<br>and Jump right in",
-        "text_subheading": "48.8532° N — 66.0385° W<br>"
+        "text_left_text": "Escapeis alwas possible",
+        "text_right_text": "just grab a bagand Jump right in",
+        "text_subheading": "48.8532° N — 66.0385° W"
       }
     }
   },
   "layout": "theme",
   "wrapper": "main.main-wrapper",
   "order": [
-    "about_fullimg_76CjG8"
+    "about_fullimg_pVNmrq"
   ]
 }
