@@ -1,9 +1,7 @@
 <div li-block="saveurs" {{ block.shopify_attributes }}>
                     
                     
-                    <h2 li-object:text="product.shopify--saveur" class="heading-style-h3">
-{{ product.title }}
-</h2>
+                    <h2 li-object="product.metafields.shopify--flavor.value" class="heading-style-h3">{{ product.metafields.shopify--flavor.value }}</h2>
                     
                   
                 </div> {% schema %} {
