@@ -1,9 +1,17 @@
-<div class="padding-global padding-section-medium">
+<div class="_404_bg-image-contaner">
+          <div class="_404_overlay"></div>{% if section.settings.image_image %}
+{{ section.settings.image_image | image_url: width: 1000 | image_tag: class: '_404_bg-image', sizes: '(max-width: 800px) 100vw, 800px', loading: 'lazy' }}
+{% else %}
+<img class="_404_bg-image" src="{{ 'limited_1.jpg' | asset_url }}" alt="" sizes="(max-width: 800px) 100vw, 800px" loading="lazy" srcset="{{ 'limited_1-p-500.jpg' | asset_url }} 500w, {{ 'limited_1.jpg' | asset_url }} 800w">
+{% endif %}
+        </div>
+        <div class="padding-global padding-section-medium z-index-2">
           <div class="container-small">
-            <div class="text-align-center">
+            <div class="text-align-center text-color-white">
               <div class="max-width-xlarge align-center">
+                <p class="text-size-medium text-weight-xbold">404</p>
                 <div class="margin-bottom margin-small">
-                  <h1 class="heading-style-h1">
+                  <h1 class="heading-style-h2">
 {{ section.settings.text_heading }}
 </h1>
                 </div>
@@ -25,6 +33,11 @@
     "name": "404",
     "class": "section_header",
     "settings": [
+        {
+            "id": "image_image",
+            "type": "image_picker",
+            "label": "Image"
+        },
         {
             "id": "text_heading",
             "type": "text",

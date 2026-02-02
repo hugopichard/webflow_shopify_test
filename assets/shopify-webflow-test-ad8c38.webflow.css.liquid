@@ -441,7 +441,6 @@ figcaption {
 .heading-style-h1 {
   text-align: left;
   word-break: break-all;
-  width: 40%;
   font-family: Molitortrial, Impact, sans-serif;
   font-size: 16.25rem;
   font-weight: 600;
@@ -1620,8 +1619,8 @@ figcaption {
 }
 
 .nav_component {
+  border-left: 1px solid var(--base-color-neutral--neutral);
   background-color: var(--base-color-neutral--white);
-  border-bottom: 1px solid #3232321a;
   justify-content: flex-end;
   align-items: center;
   width: 4rem;
@@ -1633,7 +1632,6 @@ figcaption {
   z-index: 999;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  border-right: 1px solid var(--base-color-neutral--neutral-lighter);
   background-color: var(--base-color-neutral--white);
   flex-flow: column;
   grid-template-rows: auto;
@@ -2123,6 +2121,14 @@ figcaption {
   grid-auto-columns: 1fr;
   place-items: stretch stretch;
   display: grid;
+}
+
+.section_header {
+  justify-content: center;
+  align-items: center;
+  height: 80svh;
+  display: flex;
+  position: relative;
 }
 
 .text-color-red {
@@ -4154,6 +4160,24 @@ figcaption {
   width: 120%;
   margin-top: -10%;
   margin-left: -10%;
+}
+
+._404_bg-image-contaner {
+  position: absolute;
+  inset: 0%;
+}
+
+._404_bg-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+._404_overlay {
+  background-color: var(--base-color-neutral--black);
+  opacity: .4;
+  position: absolute;
+  inset: 0%;
 }
 
 @media screen and (max-width: 991px) {
